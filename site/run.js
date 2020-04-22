@@ -7,7 +7,7 @@ const WebpackDevServer = require('webpack-dev-server');
 new WebpackDevServer(webpack({
   devtool: 'eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
+    'webpack-dev-server/client?http://0.0.0.0:8087',
     'webpack/hot/only-dev-server',
     'react-hot-loader/patch',
     './index'
@@ -65,7 +65,7 @@ new WebpackDevServer(webpack({
   hot: true,
   historyApiFallback: true,
   stats: { colors: true }
-}).listen(3000, 'localhost', error => {
+}).listen(8087, '0.0.0.0', error => {
   if (error) {
     throw error;
   }
